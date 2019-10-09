@@ -46,8 +46,15 @@ class Game
   end 
   
   def turn 
+<<<<<<< HEAD
     player = current_player
     index = player.move(@board).to_i 
+=======
+    index = 0 
+    player = current_player
+    index = player.move(@board).to_i 
+    binding.pry 
+>>>>>>> 9bbcabbdc07014d75d6eda760e0e6402097ac052
     
     if @board.valid_move?(index) && !@board.taken?(index)
       @board.update(index, player)
@@ -58,6 +65,7 @@ class Game
   end 
   
   def play 
+<<<<<<< HEAD
     turn until over? 
     
     if won? 
@@ -65,6 +73,8 @@ class Game
     elsif draw?
       puts "Cat's Game!"
     end 
+=======
+>>>>>>> 9bbcabbdc07014d75d6eda760e0e6402097ac052
   end 
 
 end 
